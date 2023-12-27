@@ -21,7 +21,7 @@
                     setTimeout(() => { atBottom = true }, 1000);
                 }
             "
-            :class="atBottom ? 'bottom-6' : 'bottom-1/2 translate-y-1/2'"
+            :class="atBottom ? 'bottom-12' : 'bottom-1/3 translate-y-1/3'"
             class="z-20 px-4 sm:px-0 transition-transform duration-1000 ease-in-out"
         >
             <audio id="sirenSound" src="{{ asset('audio/siren.mp4') }}" preload="auto"></audio>
