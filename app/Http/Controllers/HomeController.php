@@ -24,9 +24,16 @@ class HomeController extends Controller
 
     public function check(Request $request)
     {
-        $name = $request->input('name');
+
+        $validated = $request->validate([
+            'name' => 'required|unique:elves|max:255|string',
+        ]);
+
+        $name = $validated['name'];
         $ip = $request->ip();
         $userAgent = $request->header('User-Agent');
+
+        $request->session()->put('name', $name);
 
         $elf = Elf::where('ip', $ip)
             ->where('user_agent', $userAgent)
@@ -58,7 +65,7 @@ class HomeController extends Controller
             ]);
         }
 
-        if ($name === 'Sergiu Corjan') {
+        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara'])) {
             return redirect()->route('congrats');
         }
 

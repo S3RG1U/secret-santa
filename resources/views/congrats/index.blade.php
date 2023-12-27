@@ -9,7 +9,7 @@
                 <img src="{{asset('images/congrats.png')}}" alt="" class="py-3 w-64">
                 <img src="{{asset('images/opened_gift.png')}}" alt="" class="w-40 h-40 rounded-3xl">
                 <div class="bg-white rounded-xl p-3 -mt-3 bg-red-400 bg-opacity-75 shadow-lg">
-                    <p class="text-white font-bold text-xl">YES, you are the one and only!</p>
+                    <p class="text-red-500 font-bold text-xl">YES, you are the one and only!</p>
                 </div>
                 <div class="grid grid-cols-3 mt-4 gap-2">
                     <div class="bg-white rounded-2xl border border-red-500 p-3">

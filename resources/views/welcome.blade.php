@@ -21,7 +21,7 @@
                     setTimeout(() => { atBottom = true }, 1000);
                 }
             "
-            :class="atBottom ? 'bottom-0' : 'bottom-1/2 translate-y-1/2'"
+            :class="atBottom ? 'bottom-6' : 'bottom-1/2 translate-y-1/2'"
             class="z-20 px-4 py-6 sm:px-0 transition-transform duration-1000 ease-in-out"
         >
             <audio id="sirenSound" src="{{ asset('audio/siren.mp4') }}" preload="auto"></audio>
@@ -32,7 +32,7 @@
                 @csrf
                 <div class="flex items-center" :class="{ 'justify-center': !isAttempted, 'justify-end': isAttempted }">
                     <div class="mx-2 bg-white rounded-lg">
-                        <div class="rounded-lg bg-red-500 flex items-center justify-center py-0.5 font-semibold text-white px-2">
+                        <div class="rounded-xl bg-red-500 flex items-center justify-center py-0.5 font-semibold text-white px-2 scale-x-105 py-4">
                             <p>Have you really been a good human being?</p>
                         </div>
                         <div class="-mt-1 bg-red-500 h-16 bg-opacity-25"></div>
@@ -41,8 +41,8 @@
                                 <div class="flex items-end">
                                     <img src="{{asset('images/cute_present_1.png')}}" alt="" class="w-20 h-20">
                                     <div>
-                                        <p class="font-bold text-lg">Human love</p>
-                                        <p class="text-sm">Is the most precious present</p>
+                                        <p class="font-bold text-3xl text-red-500">Love ❤</p>
+                                        <p class="text-sm">Is the most precious gift</p>
                                     </div>
                                 </div>
                                 <div class="mt-4">
