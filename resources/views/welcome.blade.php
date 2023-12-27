@@ -22,7 +22,7 @@
                 }
             "
             :class="atBottom ? 'bottom-6' : 'bottom-1/2 translate-y-1/2'"
-            class="z-20 px-4 py-6 sm:px-0 transition-transform duration-1000 ease-in-out"
+            class="z-20 px-4 sm:px-0 transition-transform duration-1000 ease-in-out"
         >
             <audio id="sirenSound" src="{{ asset('audio/siren.mp4') }}" preload="auto"></audio>
             <div x-show="playSiren" class="animate-pulse">
