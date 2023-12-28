@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/congrats', [HomeController::class, 'congrats'])->name('congrats')/*->middleware('name.allowed')*/;
+Route::get('/congrats', [HomeController::class, 'congrats'])->name('congrats')->middleware('name.allowed');
 Route::post('/', [HomeController::class, 'check'])->name('check');
