@@ -29,11 +29,11 @@ class HomeController extends Controller
             'name' => 'required|unique:elves|max:255|string',
         ]);
 
-        $name = strtoupper($validated['name']);
+        $name = $validated['name'];
         $ip = $request->ip();
         $userAgent = $request->header('User-Agent');
 
-        $request->session()->put('name', strtoupper($name));
+        $request->session()->put('name', $name);
 
         $elf = Elf::where('ip', $ip)
             ->where('user_agent', $userAgent)
@@ -65,7 +65,7 @@ class HomeController extends Controller
             ]);
         }
 
-        if (in_array($name, ['CARA GABRIELA', 'GABRIELA CARA', 'CARA GABY', 'GABY CARA'])) {
+        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'cara gabriela', 'gabriela cara', 'Cara gabriela', 'cara Gabriela'])) {
             return redirect()->route('congrats');
         }
 

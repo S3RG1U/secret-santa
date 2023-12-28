@@ -17,7 +17,7 @@ class EnsureNameIsAllowed
     {
         $name = $request->session()->get('name') ?? null;
 
-        if (!in_array($name, ['CARA GABRIELA', 'GABRIELA CARA', 'CARA GABY', 'GABY CARA'])) {
+        if (!in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'Cara gabriela', 'cara Gabriela'])) {
             return redirect('/');
         }
 
