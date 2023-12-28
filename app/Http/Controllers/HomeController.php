@@ -65,7 +65,7 @@ class HomeController extends Controller
             ]);
         }
 
-        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara'])) {
+        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'cara gabriela', 'gabriela cara'])) {
             return redirect()->route('congrats');
         }
 

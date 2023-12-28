@@ -13,18 +13,18 @@
                 </div>
                 <div class="grid grid-cols-3 mt-4 gap-2">
                     <div class="bg-white rounded-2xl border border-red-500 p-3">
-                        <p class="text-center text-red-500 font-semibold">Smart</p>
+                        <p class="text-center text-red-500 text-sm font-semibold">Be smart</p>
                     </div>
                     <div class="bg-white rounded-2xl border border-red-500 p-3">
-                        <p class="text-center text-red-500 font-semibold">Gorgeous</p>
+                        <p class="text-center text-red-500 text-sm font-semibold">Be awesome</p>
                     </div>
                     <div class="bg-white rounded-2xl border border-red-500 p-3">
-                        <p class="text-center text-red-500 font-semibold">Beautiful</p>
+                        <p class="text-center text-red-500 text-sm font-semibold">Be yourself</p>
                     </div>
                 </div>
             </div>
             <div class="bg-red-500 rounded-xl mt-5 p-3">
-                <p class="text-white text-lg font-semibold">🎉 Grab that gift and open it, darling! 🎉</p>
+                <p class="text-white text-lg font-semibold text-center">🎉 Grab that gift and open it! 🎉</p>
             </div>
         </div>
     </div>

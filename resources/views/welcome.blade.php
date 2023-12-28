@@ -41,8 +41,8 @@
                                 <div class="flex items-end">
                                     <img src="{{asset('images/cute_present_1.png')}}" alt="" class="w-20 h-20">
                                     <div>
-                                        <p class="font-bold text-3xl text-red-500">Love ❤</p>
-                                        <p class="text-sm">Is the most precious gift</p>
+                                        <p class="font-bold text-3xl text-red-500">Secret Santa</p>
+                                        <p class="text-sm">Has prepared you a cute gift</p>
                                     </div>
                                 </div>
                                 <div class="mt-4">
