@@ -33,7 +33,7 @@ class HomeController extends Controller
         $ip = $request->ip();
         $userAgent = $request->header('User-Agent');
 
-        $request->session()->put('name', $name);
+        $request->session()->put('name', strtoupper($name));
 
         $elf = Elf::where('ip', $ip)
             ->where('user_agent', $userAgent)
@@ -65,7 +65,8 @@ class HomeController extends Controller
             ]);
         }
 
-        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'cara gabriela', 'gabriela cara'])) {
+        $name = strtoupper($name);
+        if (in_array($name, ['CARA GABRIELA', 'GABRIELA CARA', 'CARA GABY', 'GABY CARA'])) {
             return redirect()->route('congrats');
         }
 
