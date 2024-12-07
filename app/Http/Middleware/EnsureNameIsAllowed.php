@@ -15,9 +15,9 @@ class EnsureNameIsAllowed
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $name = $request->session()->get('name') ?? null;
+        $name = strtolower($request->session()->get('name')) ?? null;
 
-        if (!in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'Cara gabriela', 'cara Gabriela'])) {
+        if (!in_array($name, ['ionela maxim', 'maxim ionela'])) {
             return redirect('/');
         }
 

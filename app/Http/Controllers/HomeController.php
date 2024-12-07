@@ -26,10 +26,10 @@ class HomeController extends Controller
     {
 
         $validated = $request->validate([
-            'name' => 'required|unique:elves|max:255|string',
+            'name' => 'required|max:255|string',
         ]);
 
-        $name = $validated['name'];
+        $name = strtolower($validated['name']);
         $ip = $request->ip();
         $userAgent = $request->header('User-Agent');
 
@@ -65,7 +65,7 @@ class HomeController extends Controller
             ]);
         }
 
-        if (in_array($name, ['Cara Gabriela', 'Gabriela Cara', 'Cara Gaby', 'Gaby Cara', 'cara gabriela', 'gabriela cara', 'Cara gabriela', 'cara Gabriela'])) {
+        if (in_array($name, ['ionela maxim', 'maxim ionela'])) {
             return redirect()->route('congrats');
         }
 
